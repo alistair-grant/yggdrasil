@@ -3,6 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "libraries", "libraries", "{2FC1846E-13C6-4002-AFCB-30E7D98483EF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Yggdrasil.Net.Http", "Yggdrasil.Net.Http", "{14496D88-6CA4-4115-BB37-B53EC34DC3D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yggdrasil.Net.Http", "libraries\Yggdrasil.Net.Http\src\Yggdrasil.Net.Http.csproj", "{0A8EE623-ECF3-47C4-9300-C20373FF7D73}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -10,5 +16,15 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0A8EE623-ECF3-47C4-9300-C20373FF7D73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A8EE623-ECF3-47C4-9300-C20373FF7D73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A8EE623-ECF3-47C4-9300-C20373FF7D73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A8EE623-ECF3-47C4-9300-C20373FF7D73}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{14496D88-6CA4-4115-BB37-B53EC34DC3D1} = {2FC1846E-13C6-4002-AFCB-30E7D98483EF}
+		{0A8EE623-ECF3-47C4-9300-C20373FF7D73} = {14496D88-6CA4-4115-BB37-B53EC34DC3D1}
 	EndGlobalSection
 EndGlobal
