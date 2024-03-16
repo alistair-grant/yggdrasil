@@ -2,18 +2,17 @@
 
 public class AuthorizationHeaderHttpMessageHandlerTest
 {
-    private static string RandomString() => Guid.NewGuid().ToString();
-
     public static TheoryData<AuthenticationHeaderValue?> ExpectedValues =>
         new()
         {
-            new AuthenticationHeaderValue(RandomString()),
+            new AuthenticationHeaderValue(RandomScheme()),
             null
         };
 
     [Theory]
     [MemberData(nameof(ExpectedValues))]
-    public async Task SendAsync_RequestDoesNotHaveAuthorizationHeader_AddsExpectedHeader(AuthenticationHeaderValue? expected)
+    public async Task SendAsync_RequestDoesNotHaveAuthorizationHeader_AddsExpectedHeader(
+        AuthenticationHeaderValue? expected)
     {
         var request = new HttpRequestMessage();
 
@@ -32,14 +31,14 @@ public class AuthorizationHeaderHttpMessageHandlerTest
     [Fact]
     public async Task SendAsync_RequestHasAuthorizationHeader_UsesExistingHeader()
     {
-        var expected = new AuthenticationHeaderValue(RandomString());
+        var expected = new AuthenticationHeaderValue(RandomScheme());
 
         var request = new HttpRequestMessage();
         request.Headers.Authorization = expected;
 
         var valueProvider = Substitute.For<IAuthorizationHeaderValueProvider>();
         valueProvider.GetAuthorizationHeaderValueAsync(Arg.Any<CancellationToken>())
-            .Returns(new AuthenticationHeaderValue(RandomString()));
+            .Returns(new AuthenticationHeaderValue(RandomScheme()));
 
         await new HandlerWrapper(valueProvider)
             .SendAsync(request, CancellationToken.None);
@@ -48,6 +47,9 @@ public class AuthorizationHeaderHttpMessageHandlerTest
 
         Assert.Same(expected, actual);
     }
+
+    private static string RandomScheme() =>
+        Guid.NewGuid().ToString();
 
     private class HandlerWrapper : AuthorizationHeaderHttpMessageHandler
     {
