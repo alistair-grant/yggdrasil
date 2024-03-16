@@ -15,6 +15,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Yggdrasil.AspNetCore.Http",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yggdrasil.AspNetCore.Http", "libraries\Yggdrasil.AspNetCore.Http\src\Yggdrasil.AspNetCore.Http.csproj", "{BA0F6C8B-4B97-40AF-B8CE-A954D2016FC4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yggdrasil.AspNetCore.Http.Tests", "libraries\Yggdrasil.AspNetCore.Http\test\Yggdrasil.AspNetCore.Http.Tests.csproj", "{13C51C91-928D-43D0-9E69-0D231CF320FE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,6 +38,10 @@ Global
 		{BA0F6C8B-4B97-40AF-B8CE-A954D2016FC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA0F6C8B-4B97-40AF-B8CE-A954D2016FC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA0F6C8B-4B97-40AF-B8CE-A954D2016FC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13C51C91-928D-43D0-9E69-0D231CF320FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13C51C91-928D-43D0-9E69-0D231CF320FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13C51C91-928D-43D0-9E69-0D231CF320FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13C51C91-928D-43D0-9E69-0D231CF320FE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{14496D88-6CA4-4115-BB37-B53EC34DC3D1} = {2FC1846E-13C6-4002-AFCB-30E7D98483EF}
@@ -43,5 +49,6 @@ Global
 		{872AADA0-F111-4284-8A60-8086153331BC} = {14496D88-6CA4-4115-BB37-B53EC34DC3D1}
 		{B6490408-6C79-4D99-AFAF-B76AC0DB4FF5} = {2FC1846E-13C6-4002-AFCB-30E7D98483EF}
 		{BA0F6C8B-4B97-40AF-B8CE-A954D2016FC4} = {B6490408-6C79-4D99-AFAF-B76AC0DB4FF5}
+		{13C51C91-928D-43D0-9E69-0D231CF320FE} = {B6490408-6C79-4D99-AFAF-B76AC0DB4FF5}
 	EndGlobalSection
 EndGlobal
